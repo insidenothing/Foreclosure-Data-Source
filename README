@@ -1,0 +1,10 @@
+0 0,12 * * * wget -O /dev/null http://patrick.mdwestserve.com/MAP/watchDog/atlantic.php > /dev/null 2>&1             #monitor / record atlantic web schedule
+0 1,13 * * * wget -O /dev/null http://patrick.mdwestserve.com/MAP/watchDog/tidewater.php > /dev/null 2>&1              #monitor / record tidewater web schedule
+0 2,14 * * * wget -O /dev/null http://patrick.mdwestserve.com/MAP/watchDog/cooper.php > /dev/null 2>&1               #monitor / record cooper web schedule
+0 3,15 * * * wget -O /dev/null http://patrick.mdwestserve.com/MAP/watchDog/hwa.php > /dev/null 2>&1                #monitor / record hwa web schedule
+
+
+
+# 0,15,30,45 * * * * php -f /sandbox/patrick/MAP/craigslist.marketing.php #pull leads
+# 5,20,35,45,50 * * * * php -f /sandbox/patrick/MAP/spooler.ai.php  #extract email
+# 10,25,40,55 * * * * php -f /sandbox/patrick/MAP/invite.ai.php  #send invite

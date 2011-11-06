@@ -13,7 +13,7 @@ td { font-size:10pt; }
 		<td>Auction Notes</td>
 	</tr>
 <?
-$r=@mysql_query("select * from hwaSales order by uid desc limit 0, 1000");
+$r=@mysql_query("select * from hwaSales order by uid desc limit 0, 75");
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){
 ?>
 	<tr>

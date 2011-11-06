@@ -51,7 +51,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		<td>Auction Notes</td>
 	</tr>
 <?
-if ($_GET['q']){
+
 $r=@mysql_query("select online, county, address, notes from tidewaterSales where county like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
@@ -221,4 +221,4 @@ Searching for <b><?php  echo $_GET['q'];?></b>, <em><?php  echo $i?> auctions fo
 
 
 
-<?php } } ?>
+<?php  } ?>

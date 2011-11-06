@@ -13,14 +13,14 @@ td { font-size:10pt; }
 		<td>Auction Notes</td>
 	</tr>
 <?
-$r=@mysql_query("select * from tidewaterSales order by uid desc limit 0, 1000");
+$r=@mysql_query("select online,county, address, notes from tidewaterSales order by uid desc limit 0, 75");
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){
 ?>
 	<tr>
-		<td><?=substr($d[online],0,10);?></td>
-		<td><?=$d[county];?></td>
-		<td><?=$d[address];?></td>
-		<td><?=$d[notes];?></td>
+		<td><?=substr($d['online'],0,10);?></td>
+		<td><?=$d['county'];?></td>
+		<td><?=$d['address'];?></td>
+		<td><?=$d['notes'];?></td>
 	</tr>
 <? } ?>
 </table>

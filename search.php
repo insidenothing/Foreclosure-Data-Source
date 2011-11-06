@@ -23,7 +23,7 @@ td {
 	<tr>
 		<td colspan="4"
 			<form><div><input name="q"><input type="submit" value="Search Database"></div>
-<? if ($_GET['q']){ $i=0; ?>
+<?php  if ($_GET['q']){ $i=0; ?>
 		</td>
 	</tr>
 <tr>
@@ -56,144 +56,144 @@ while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Tidewater</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from hwaSales where county like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Harvey West</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from cooperSales where county like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Alex Cooper</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from atlanticSales where county like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Mid-Atlantic</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from tidewaterSales where address like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Tidewater</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from cooperSales where address like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Alex Cooper</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from hwaSales where address like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Harvey West</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from atlanticSales where address like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Mid-Atlantic</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from hwaSales where notes like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Harvey West</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from tidewaterSales where notes like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Tidewater</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from cooperSales where notes like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Alex Cooper</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <?
 $r=@mysql_query("select  online, county, address, notes from atlanticSales where notes like '%".$_GET['q']."%' order by uid desc limit 0, 500") or die(mysql_error());
 while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 ?>
 	<tr>
 		<td>Mid-Atlantic</td>
-		<td><? echo substr($d['online'],0,10);?></td>
-		<td><? echo highlight($_GET['q'],$d['county']);?></td>
-		<td><? echo highlight($_GET['q'],$d['address']);?></td>
-		<td><? echo highlight($_GET['q'],$d['notes']);?></td>
+		<td><?php  echo substr($d['online'],0,10);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['county']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['address']);?></td>
+		<td><?php  echo highlight($_GET['q'],$d['notes']);?></td>
 	</tr>
-<? } ?>
+<?php  } ?>
 <tr>
 	<td colspan="4">
 		<div align="center">
@@ -204,9 +204,9 @@ while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){ $i++;
 		</div>
 	</td>
 </tr>
-Searching for <b><? echo $_GET['q'];?></b>, <em><? echo $i?> auctions found</em>
+Searching for <b><?php  echo $_GET['q'];?></b>, <em><?php  echo $i?> auctions found</em>
 </table>
 
 
 
-<? } ?>
+<?php  } ?>

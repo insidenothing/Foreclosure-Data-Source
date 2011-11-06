@@ -19,8 +19,8 @@ while ($d=mysql_fetch_array($r,MYSQL_ASSOC)){
 	<tr>
 		<td><?=substr($d['online'],0,10);?></td>
 		<td><?=$d['county'];?></td>
-		<td><?=$d['address''];?></td>
-		<td><?=$d['notes''];?></td>
+		<td><?=$d['address'];?></td>
+		<td><?=$d['notes'];?></td>
 	</tr>
 <? } ?>
 </table>
